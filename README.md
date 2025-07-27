@@ -1,4 +1,4 @@
-# ExceptionHandlingProblemDetails (.NET 8 Web API)
+# ExceptionHandling with ProblemDetails (.NET 8 Web API)
 
 A sample ASP.NET Core 8 Web API project demonstrating **global exception handling** using `ProblemDetails` (RFC 7807 standard). This project shows how to catch all unhandled exceptions and return standardized error responses across your API.
 
