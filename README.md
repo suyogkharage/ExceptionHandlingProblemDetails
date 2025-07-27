@@ -17,19 +17,19 @@ A sample ASP.NET Core 8 Web API project demonstrating **global exception handlin
 
 ## Project Structure
 
-ExceptionHandlingProblemDetails/
-│
-├── Controllers/
-│ └── ProductsController.cs
-│
-├── Middlewares/
-│ └── ExceptionHandlingMiddleware.cs
-│
-├── Models/
-│ └── Product.cs
-│
-├── Program.cs
-└── README.md
+ExceptionHandlingProblemDetails/  
+│  
+├── Controllers/  
+│ └── ProductsController.cs  
+│  
+├── Middlewares/  
+│ └── ExceptionHandlingMiddleware.cs  
+│  
+├── Models/  
+│ └── Product.cs  
+│  
+├── Program.cs  
+└── README.md  
 
 
 ---
