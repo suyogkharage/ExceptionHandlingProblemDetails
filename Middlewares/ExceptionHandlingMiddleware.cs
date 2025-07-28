@@ -7,8 +7,6 @@ namespace ExceptionHandlingProblemDetails.Middlewares
 {
     public class ExceptionHandlingMiddleware(RequestDelegate next, ILogger<ExceptionHandlingMiddleware> logger)
     {
-        private readonly RequestDelegate _next;
-        private readonly ILogger<ExceptionHandlingMiddleware> _logger;
         public async Task InvokeAsync(HttpContext context)
         {
             try
