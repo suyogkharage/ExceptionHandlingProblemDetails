@@ -5,26 +5,19 @@ using System.Text.Json;
 
 namespace ExceptionHandlingProblemDetails.Middlewares
 {
-    public class ExceptionHandlingMiddleware
+    public class ExceptionHandlingMiddleware(RequestDelegate next, ILogger<ExceptionHandlingMiddleware> logger)
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<ExceptionHandlingMiddleware> _logger;
-
-        public ExceptionHandlingMiddleware(RequestDelegate next, ILogger<ExceptionHandlingMiddleware> logger)
-        {
-            _logger = logger;
-            _next = next;
-        }
-
         public async Task InvokeAsync(HttpContext context)
         {
             try
             {
-                await _next(context);
+                await next(context);
             }
             catch (Exception ex)
             {
-                _logger.LogError("Unhandled exception occurred.");
+                logger.LogError("Unhandled exception occurred.");
 
                 var problemDetails = new ProblemDetails
                 {
